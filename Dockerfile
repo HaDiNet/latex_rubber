@@ -1,5 +1,5 @@
-FROM debian:buster-slim
+FROM ubuntu:focal
 
 RUN apt-get update && \
-    apt-get install -y git rubber texlive-latex-extra texlive-science texlive-lang-german && \
+    DEBIAN_FRONTEND="noninteractive" apt-get install -y git rubber texlive-latex-extra texlive-science texlive-lang-german && \
     rm -rf /var/lib/apt/lists/*
